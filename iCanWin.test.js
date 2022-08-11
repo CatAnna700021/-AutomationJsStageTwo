@@ -9,8 +9,6 @@ describe('Pastebin task', () => {
     await PastePage.open('https://pastebin.com');
     await PastePage.textName.setValue('helloweb');
     await PastePage.textPasta.setValue("Привет от WebDriver");
-    const elem = await $('//*[@id="select2-postform-expiration-container"]');
-    await elem.waitForClickable({ timeout: 6000 });
     await $(`#select2-postform-expiration-container`).click();
     let neededExpiration = await $(`#select2-postform-expiration-results :nth-child(3)`);
     await neededExpiration.waitForExist();
