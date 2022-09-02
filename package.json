@@ -1,0 +1,29 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "start.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^7.23.0",
+        "@wdio/local-runner": "^7.23.0",
+        "@wdio/mocha-framework": "^7.23.0",
+        "@wdio/spec-reporter": "^7.23.0",
+        "chromedriver": "^104.0.0",
+        "eslint": "^8.22.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "mocha": "^10.0.0",
+        "wdio-chromedriver-service": "^7.3.2"
+    },
+    "dependencies": {
+        "chai": "^4.3.6"
+    }
+}
