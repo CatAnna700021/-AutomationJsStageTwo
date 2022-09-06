@@ -55,7 +55,7 @@ describe('Hardcore', () =>{
         await calculatorPage.emailString.setValue(generatedMail);
         await calculatorPage.sendEmailButton.click();
         await browser.switchWindow(`https://yopmail.com/`);
-        //await browser.switchToFrame(0);
+        
         let totalVolume = await emailPage.totalEstimated.getText();
 
         expect(totalVolume).toHaveTextContaining(calculatorPage.totalEstimate);
