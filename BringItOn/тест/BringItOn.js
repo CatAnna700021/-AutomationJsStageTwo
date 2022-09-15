@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-// eslint-disable-next-line no-unused-vars
 import pastePage from '../pageObject/pasteObject.js'
 
 describe('Pastebin task', () => {
