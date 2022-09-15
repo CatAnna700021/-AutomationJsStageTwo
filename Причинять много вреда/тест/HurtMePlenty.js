@@ -2,7 +2,6 @@ import mainPage from "../pageObject/mainPage.js";
 import calculatorPage from "../pageObject/calculatorPage.js";
 
 const expectChai = import('chai')
-//const expect = import('chai');
 
 describe('Hurt Me Plenty task', () =>{
     it('googleCalculator', async() =>{
