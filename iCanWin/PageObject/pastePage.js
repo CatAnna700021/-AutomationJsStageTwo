@@ -21,11 +21,6 @@ class pastePage extends Page {
     return $('#select2-postform-expiration-results :nth-child(3)');
   }  
 
-//#select2-postform-expiration-result-6sd6-10M
-  //get syntaxHighlighting() {
-   // return $('#select2-postform-format-container');
-  //}
-
    get neededExpiration() {
     return $('#select2-postform-expiration-results :nth-child(3)');
   }
