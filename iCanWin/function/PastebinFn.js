@@ -1,5 +1,5 @@
 import PastebinPage from '../test/pageObjects/PastebinPage';
-import Page from '../test/pageObjects/page';
+import Page from '../test/pageObjects/Page';
 import HelpIt from './HelpIt';
 
 class PastebinFn extends Page{
