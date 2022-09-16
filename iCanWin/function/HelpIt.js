@@ -1,4 +1,4 @@
-import Page from '../test/pageObjects/page';
+import Page from '../test/pageObjects/Page';
 
 class HelpIt extends Page {
     async click(element){
