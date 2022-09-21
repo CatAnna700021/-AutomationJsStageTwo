@@ -1,17 +1,17 @@
 import PastebinPage from '../test/pageObjects/PastebinPage';
 import Page from '../test/pageObjects/Page';
-import HelpIt from './HelpIt';
+import Helper from './Helper';
 
 class PastebinFn extends Page{
 async createPaste(){
   await PastebinPage.open();
-  await HelpIt.write(PastebinPage.pasteForm, PastebinPage.pasteText);
-  await HelpIt.choseFromDroplist(PastebinPage.expirationList, PastebinPage.neededExpiration);
-  await HelpIt.write(PastebinPage.pasteNameElement, PastebinPage.pasteName);
-  await HelpIt.click(PastebinPage.createPasteBtn);
+  await Helper.write(PastebinPage.pasteForm, PastebinPage.pasteText);
+  await Helper.choseFromDroplist(PastebinPage.expirationList, PastebinPage.neededExpiration);
+  await Helper.write(PastebinPage.pasteNameElement, PastebinPage.pasteName);
+  await Helper.click(PastebinPage.createPasteBtn);
 }
 async checkPasteTitle(){
-  await HelpIt.checkTitle(PastebinPage.pasteTextElement, PastebinPage.pasteName);
+  await Helper.checkTitle(PastebinPage.pasteTextElement, PastebinPage.pasteName);
 }
 }
 module.exports = new PastebinFn();
