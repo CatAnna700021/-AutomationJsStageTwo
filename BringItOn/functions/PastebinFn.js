@@ -1,22 +1,22 @@
 import PastebinPage from "../test/pageObjects/PastebinPage";
 import Page from "../test/pageObjects/Page";
-import HelpIt from "../functions/HelpIt";
+import Helper from "../functions/Helper";
  
 class PastebinFn extends Page{
 async createPste(){
     PastebinPage.open();
-    await HelpIt.write(PastebinPage.pasteForm,PastebinPage.postformText);
-    await HelpIt.click(PastebinPage.codeHighlighter);
-    await HelpIt.writeAndSumbit(PastebinPage.highlighterInput,PastebinPage.bashHighlighter);
-    await HelpIt.choseFromDroplist(PastebinPage.expirationList,PastebinPage.neededExpiration);
-    await HelpIt.write(PastebinPage.pasteNameElement,PastebinPage.title);
-    await HelpIt.click(PastebinPage.createPasteBtn);
+    await Helper.write(PastebinPage.pasteForm,PastebinPage.postformText);
+    await Helper.click(PastebinPage.codeHighlighter);
+    await Helper.writeAndSumbit(PastebinPage.highlighterInput,PastebinPage.bashHighlighter);
+    await Helper.choseFromDroplist(PastebinPage.expirationList,PastebinPage.neededExpiration);
+    await Helper.write(PastebinPage.pasteNameElement,PastebinPage.title);
+    await Helper.click(PastebinPage.createPasteBtn);
     }
 
     async checkPaste() {
-        await HelpIt.checkTitle(PastebinPage.title);
-        await HelpIt.checkElementForHaving(PastebinPage.pasteHighterElement,PastebinPage.bashHighlighter);
-        await HelpIt.checkElementForHaving(PastebinPage.pasteTextElement,PastebinPage.postformText);
+        await Helper.checkTitle(PastebinPage.title);
+        await Helper.checkElementForHaving(PastebinPage.pasteHighterElement,PastebinPage.bashHighlighter);
+        await Helper.checkElementForHaving(PastebinPage.pasteTextElement,PastebinPage.postformText);
     }
 }
 
