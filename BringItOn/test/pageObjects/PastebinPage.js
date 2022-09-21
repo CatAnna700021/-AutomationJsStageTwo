@@ -1,5 +1,5 @@
 import Page from './page';
-import Helper = from '../../functions/helper';
+import Helper from '../../functions/helper';
 
 class PastebinPage extends Page {
   get pasteForm() {return $('//*[@id="postform-text"]');}
