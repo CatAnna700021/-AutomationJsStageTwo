@@ -1,5 +1,5 @@
 import Page from './page';
-let HelpIt = require('../../functions/helpit');
+let Helper = require('../../functions/helper');
 
 class PastebinPage extends Page {
   get pasteForm() {return $('//*[@id="postform-text"]');}
