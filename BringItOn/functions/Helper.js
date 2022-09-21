@@ -1,6 +1,6 @@
 import Page from "../test/pageObjects/Page";
 
-class HelpIt extends Page {
+class Helper extends Page {
     async click(element){
         await element.waitForExist(5000);
         await element.click();
@@ -29,4 +29,4 @@ class HelpIt extends Page {
     }
 }
 
-module.exports= new HelpIt();
+module.exports= new Helper();
