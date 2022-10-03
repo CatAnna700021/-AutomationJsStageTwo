@@ -1,4 +1,4 @@
-import PastebinPageFn from '../../functions/pastebinFn';
+import PastebinPageFn from '../../functions/PastebinFn';
 
 describe('I can win webdriverIO task', () => {
 
