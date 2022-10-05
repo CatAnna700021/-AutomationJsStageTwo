@@ -15,9 +15,7 @@
   
       add(firstNumber, secondNumber) {
         if (firstNumber + secondNumber) {
-          return (firstNumber + secondNumber);
-        }
-      }
+          return (firstNumber + secondNumber);}}
   
       /**
        * {number} firstNumber
@@ -27,10 +25,6 @@
        */
       multiply(firstNumber, secondNumber) {
         if (firstNumber * secondNumber) {
-          return (firstNumber * secondNumber);
-        }
-      }
-  }
+          return (firstNumber * secondNumber);}}}
   
-  
-  module.exports = Calculator;
+    module.exports = Calculator;
