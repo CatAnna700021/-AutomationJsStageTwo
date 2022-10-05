@@ -1,6 +1,6 @@
 import Page from './Page';
 class CalculatorPage extends Page{
-    get numberOfInstances() { return $('//input[@ng-model="listingCtrl.computeServer.quantity"]'); }
+  get numberOfInstances() { return $('//input[@ng-model="listingCtrl.computeServer.quantity"]'); }
   get machineSeriesList() { return $('//md-select[@placeholder="Series"]/md-select-value/span/div'); }
   get n1MachineSeries() { return $('//md-option[@value="n1"]/div[@class="md-text ng-binding"]'); }
   get machineTypeList() { return $('//md-select[@placeholder="Instance type"]/md-select-value/span/div'); }
@@ -16,6 +16,5 @@ class CalculatorPage extends Page{
   get neededDatacenterLocation() {return $('//md-select-menu[@class="md-overflow"]//md-option[@value="europe-west3"]//div[@class="md-text ng-binding"]');}
   get commitedUsageList() {return $('//md-select[@placeholder="Committed usage"][@ng-disabled="listingCtrl.isCudDisabled"]//md-select-value[@class="md-select-value"]//span//div');}
   get commitedUsageTime() {return $('//div[@class="md-select-menu-container md-active md-clickable"]//md-select-menu//md-content//md-option[@ng-value="1"]//div[@class="md-text"]');}
-  get addToEstimateBtn() {return $('//button[@class="md-raised md-primary cpc-button md-button md-ink-ripple"][@aria-label="Add to Estimate"][1]');}
-}
+  get addToEstimateBtn() {return $('//button[@class="md-raised md-primary cpc-button md-button md-ink-ripple"][@aria-label="Add to Estimate"][1]');}}
 module.exports = new CalculatorPage();
