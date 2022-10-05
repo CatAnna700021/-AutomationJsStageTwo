@@ -11,13 +11,9 @@ class CloudgooglePage extends Page {
         this.open();
         await Helper.click(this.searchBox);
         await Helper.writeAndSumbit(this.inputSearch, this.googleCalcTitle);
-        await Helper.click(this.searchResult);
-    }
+        await Helper.click(this.searchResult);}
     async checkTitle() {
-        await Helper.checkTitle(this.googleCalcTitle);
-    }
+        await Helper.checkTitle(this.googleCalcTitle);}
     open() {
-        super.open('https://cloud.google.com')
-    }
-}
+        super.open('https://cloud.google.com')}}
 export default new CloudgooglePage();
