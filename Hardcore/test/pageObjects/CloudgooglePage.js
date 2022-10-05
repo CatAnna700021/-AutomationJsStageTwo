@@ -15,17 +15,12 @@ class CloudgooglePage extends Page {
         await Helper.click(this.searchBox);
         await Helper.writeAndSumbit(this.inputSearch, this.googleCalcTitle);
         await this.searchResult.waitForExist(5000);
-        await Helper.click(this.searchResult);
-    }
+        await Helper.click(this.searchResult);}
     async checkTitle(){
-        await Helper.checkTitle(this.googleCalcTitle);
-    }
+        await Helper.checkTitle(this.googleCalcTitle);}
     async clickToEmailEstimate(){
-        await this.emailEstimateBtn.click();
-    }
+        await this.emailEstimateBtn.click();}
 
     open(){
-        super.open('https://cloud.google.com')
-    }
-}
+        super.open('https://cloud.google.com')}}
 export default new CloudgooglePage();
