@@ -1,5 +1,5 @@
 import Page from './page';
-var Helper = require('../../functions/Helper');
+let Helper = require('../../functions/Helper');
 
 class YopmailPage extends Page {
   get youpmailURL() {return 'https://yopmail.com/ru/';}
@@ -10,24 +10,18 @@ class YopmailPage extends Page {
   
   async generateMail(){
     await browser.newWindow(this.youpmailURL);
-    await this.generateMailBtn.click();
-  }
+    await this.generateMailBtn.click();}
   async switchToYopmail(){
-    await browser.switchWindow('yopmail.com');
-  }
+    await browser.switchWindow('yopmail.com');}
   async openMailedPrice(){
     await Helper.click(this.checkMailBtn);
     await browser.refresh();
-    await browser.switchToFrame(2);
-  }
+    await browser.switchToFrame(2);}
   async checkMailedPrice(){
-    await Helper.checkElementForHaving(this.monthlyCostsField, 'USD 5,411.26');
-  }
+    await Helper.checkElementForHaving(this.monthlyCostsField, 'USD 5,411.26');}
   
   open() {
-    super.open('https://yopmail.com/ru/');
-  }
-}
+    super.open('https://yopmail.com/ru/');}}
 
 export default new YopmailPage();
 
