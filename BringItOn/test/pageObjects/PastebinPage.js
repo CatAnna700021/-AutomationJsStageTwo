@@ -11,7 +11,6 @@ class PastebinPage extends Page {
   get createPasteBtn() { return $('//button[@type="submit"]');}
   get bashHighlighterElement() {return $('//a[@href="/archive/bash"]');}
   get pasteTextElement(){return $('//textarea[@class="textarea"]');}
-
   get title() { return 'how to gain dominance among developers';}  
   get postformText() {return `git config --global user.name  "New Sheriff in Town"
   git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
@@ -19,8 +18,5 @@ class PastebinPage extends Page {
   get bashHighlighter() { return "Bash";}
 
   open() {
-    super.open('http://pastebin.com');
-  }
-}
-
+    super.open('http://pastebin.com');}}
 export default new PastebinPage();
