@@ -8,8 +8,4 @@ export default class Page {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
    async open (path) {
-        await browser.url(path);
-
-
-    }
-}
+        await browser.url(path);}}
