@@ -11,7 +11,7 @@ async createPste(){
     await Helper.choseFromDroplist(PastebinPage.expirationList,PastebinPage.neededExpiration);
     await Helper.write(PastebinPage.pasteNameElement,PastebinPage.title);
     await Helper.click(PastebinPage.createPasteBtn);}
- async checkPaste() {
+ async checkPaste(){
     await Helper.checkTitle(PastebinPage.title);
     await Helper.checkElementForHaving(PastebinPage.pasteHighterElement,PastebinPage.bashHighlighter);
     await Helper.checkElementForHaving(PastebinPage.pasteTextElement,PastebinPage.postformText);}}
