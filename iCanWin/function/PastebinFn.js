@@ -8,10 +8,7 @@ async createPaste(){
   await Helper.write(PastebinPage.pasteForm, PastebinPage.pasteText);
   await Helper.choseFromDroplist(PastebinPage.expirationList, PastebinPage.neededExpiration);
   await Helper.write(PastebinPage.pasteNameElement, PastebinPage.pasteName);
-  await Helper.click(PastebinPage.createPasteBtn);
-}
+  await Helper.click(PastebinPage.createPasteBtn);}
 async checkPasteTitle(){
-  await Helper.checkTitle(PastebinPage.pasteTextElement, PastebinPage.pasteName);
-}
-}
+  await Helper.checkTitle(PastebinPage.pasteTextElement, PastebinPage.pasteName);}}
 module.exports = new PastebinFn();
