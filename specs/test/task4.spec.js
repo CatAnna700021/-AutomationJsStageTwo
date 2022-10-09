@@ -3,7 +3,7 @@ const Page = require('../../app/Page');
 const { default: YopMailPage } = require('../../app/YopMailPage');
 
 discribe('Hardcore', () =>{
-    before( async() =>{
+    before('Create a new calculator', async() =>{
         await CloudgooglePage.open();
         await CloudgooglePage.openPricingCalculator();
         await CloudgooglePage.witchToCalculatorFrame();
