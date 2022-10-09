@@ -7,7 +7,7 @@ describe('I can win', () => {
     await PastebinPage.createPaste()
 
   });
-  it('should have a syntax Bash', async () => {
+  it('should have a title', async () => {
     await expect(PastebinPage.checkPasteTitle());
   });
 
