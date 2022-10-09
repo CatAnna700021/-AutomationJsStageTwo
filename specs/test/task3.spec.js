@@ -1,7 +1,7 @@
 const GoogleCloudPage = require('../../app/GoogleCloudPage');
 
 discribe('hurt me plenty', () =>{
-    before( async() =>{
+    before('Create a new calculator', async() =>{
         await GoogleCloudPage.open();
         await GoogleCloudPage.openPricingCalculator();
         await GoogleCloudPage.witchToCalculatorFrame();
