@@ -1,14 +1,14 @@
-const GoogleCloudPage = require('../../app/GoogleCloudPage');
+const CloudgooglePage = require('../../app/GoogleCloudPage');
 
-discribe('hurt me plenty', () =>{
-    before('Create a new calculator', async() =>{
-        await GoogleCloudPage.open();
-        await GoogleCloudPage.openPricingCalculator();
-        await GoogleCloudPage.witchToCalculatorFrame();
-        await GoogleCloudPage.addNewCalculator();
-        await GoogleCloudPage.clickAddToEstimateBtn();    
-    });
+discribe('Hurt me plenty', () => {
+  before( async () => {
+    await CloudgooglePage.open();
+    await CloudgooglePage.openPricingCalculator();
+    await CloudgooglePage.witchToCalculatorFrame();
+    await CloudgooglePage.addNewCalculator();
+    await CloudgooglePage.clickAddToEstimateBtn();
+  });
   it('should check machine parameters and price', async () => {
-        await GoogleCloudPage.checkGoogleCalculator();
-    });
+    await CloudgooglePage.checkGoogleCalculator();
+  });
 });
