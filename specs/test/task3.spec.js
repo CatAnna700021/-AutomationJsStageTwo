@@ -1,6 +1,6 @@
 const CloudgooglePage = require('../../app/GoogleCloudPage');
 
-discribe('Hurt me plenty', () => {
+describe('Hurt me plenty', () => {
   before( async () => {
     await CloudgooglePage.open();
     await CloudgooglePage.openPricingCalculator();
