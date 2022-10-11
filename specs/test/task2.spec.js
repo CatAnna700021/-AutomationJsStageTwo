@@ -2,7 +2,7 @@ const PastebinPage = require('../../app/PastebinPage');
 
 describe('Bring it on', () => {
 
-  befor( async () => {
+  before( async () => {
     await PastebinPage.open();
     await PastebinPage.createPaste()
   });
