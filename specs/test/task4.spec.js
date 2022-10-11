@@ -2,7 +2,7 @@ const GoogleCloudPage = require('../../app/GoogleCloudPage');
 const Page = require('../../app/Page');
 const YopMailPage = require('../../app/YopMailPage');
 
-dуscribe('Hardcore', () => {
+describe('Hardcore', () => {
   before( async () => {
     await CloudgooglePage.open();
     await CloudgooglePage.openPricingCalculator();
