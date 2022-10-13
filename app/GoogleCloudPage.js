@@ -106,48 +106,48 @@ class CloudgooglePage extends Page {
     super.open('https://cloud.google.com')
   };
 
-  async openPricingCalculator() {
+ async openPricingCalculator(){
     this.open();
-    await Page.click(this.searchBox);
-    await Page.writeAndSumbit(this.inputSearch, this.googleCalcTitle);
-    await Page.click(this.searchResult);
-    await Page.checkTitle(this.googleCalcTitle);
-    await Page.click(this.searchResultLink)
-  };
-  async switchToCalculatorFrame() {
+    await this.click(this.searchBox);
+    await this.writeAndSumbit(this.inputSearch, this.googleCalcTitle);
+    await this.click(this.searchResult);
+    await this.checkTitle(this.googleCalcTitle);
+    await this.click(this.searchResultLink)
+};
+async switchToCalculatorFrame(){
     await browser.switchToFrame(0);
     await browser.switchToFrame(0);
-  };
-  async addNewCalculator() {
-    await Page.write(this.numberOfInstances, '4');
-    await Page.choseDroplistElement(this.machineSeriesList, this.n1MachineSeries);
-    await Page.choseDroplistElement(this.machineTypeList, this.n1s8MachineType);
-    await Page.click(this.addGPUsButton);
-    await Page.choseDroplistElement(this.numberOfGpusString, this.neededNumberOfGPUs);
-    await Page.choseDroplistElement(this.typeOfGPUsList, this.neededTypeOfGPU);
-    await Page.choseDroplistElement(this.listOfSDDs, this.neededTypeOfSDD);
-    await Page.choseDroplistElement(this.datacenterLocationList, this.neededDatacenterLocation);
-    await Page.choseDroplistElement(this.commitedUsageList, this.commitedUsageTime);
+};
+async addNewCalculator() {
+    await this.write(this.numberOfInstances,'4');
+    await this.choseDroplistElement(this.machineSeriesList,this.n1MachineSeries);
+    await this.choseDroplistElement(this.machineTypeList, this.n1s8MachineType);
+    await this.click(this.addGPUsButton);
+    await this.choseDroplistElement(this.numberOfGpusString, this.neededNumberOfGPUs);
+    await this.choseDroplistElement(this.typeOfGPUsList, this.neededTypeOfGPU);
+    await this.choseDroplistElement(this.listOfSDDs, this.neededTypeOfSDD);
+    await this.choseDroplistElement(this.datacenterLocationList, this.neededDatacenterLocation);
+    await this.choseDroplistElement(this.commitedUsageList, this.commitedUsageTime);
   };
   async clickAddToEstimateBtn() {
-    await Page.click(this.addToEstimateBtn);
+    await this.click(this.addToEstimateBtn);
   };
   async checkAddingResults() {
-    await Page.checkElementForHaving(this.addToEstimateBtn, 'ADD TO ESTIMATE');
+    await this.checkElementForHaving(this.addToEstimateBtn, 'ADD TO ESTIMATE');
   };
   async checkGoogleCalculator() {
-    await Page.checkElementForHaving(this.vmClassSelected, 'regular');
-    await Page.checkElementForHaving(this.instanceTypeSelected, 'n1-standard-8');
-    await Page.checkElementForHaving(this.localSDDSelected, 'Local SSD: 2x375 GiB');
-    await Page.checkElementForHaving(this.regionSelected, 'Region: Frankfurt');
-    await Page.checkElementForHaving(this.commitmentTermSelected, 'Commitment term: 1 Year');
-    await Page.checkElementForHaving(this.estimatedCost, 'Total Estimated Cost: USD 1,288.70 per 1 month');
+    await this.checkElementForHaving(this.vmClassSelected, 'regular');
+    await this.checkElementForHaving(this.instanceTypeSelected, 'n1-standard-8');
+    await this.checkElementForHaving(this.localSDDSelected,'Local SSD: 2x375 GiB');
+    await this.checkElementForHaving(this.regionSelected,'Region: Frankfurt');
+    await this.checkElementForHaving(this.commitmentTermSelected,'Commitment term: 1 Year');
+    await this.checkElementForHaving(this.estimatedCost,'Total Estimated Cost: USD 1,288.70 per 1 month');
   };
   async sendEmail() {
-    await Page.switchToWindow('https://cloud.google.com');
-    await Page.click(this.emailEstimateBtn);
-    await Page.write(this.emailField, YopMailPage.generatedMail);
-    await Page.click(this.sendEmailBtn);
+    await this.switchToWindow('https://cloud.google.com');
+    await this.click(this.emailEstimateBtn);
+    await this.write(this.emailField,YopMailPage.generatedMail);
+    await this.click(this.sendEmailBtn);
   };
 
 };
