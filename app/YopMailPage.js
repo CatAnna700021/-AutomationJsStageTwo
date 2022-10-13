@@ -29,7 +29,7 @@ class YopMailPage extends Page {
     await browser.switchWindow('yopmail.com');
   };
   async openMailedPrice() {
-    await Page.click(this.checkMailBtn);
+    await this.click(this.checkMailBtn);
     await browser.refresh();
   };
 
