@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "WebDriverIO" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "WebDriverIO" ]
+    branches: [ "main" ]
 
 jobs:
   build:
