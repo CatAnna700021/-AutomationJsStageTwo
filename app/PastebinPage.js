@@ -61,24 +61,24 @@ class PastebinPage extends Page {
     super.open('http://pastebin.com');
   };
 
-  async createPste() {
+  async createPste(){
+    
+    await this.write(this.pasteForm,this.postformText);
+    await this.click(this.codeHighlighter);
+    await this.writeAndSumbit(this.highlighterInput,this.bashHighlighter);
+    await this.choseFromDroplist(this.expirationList,this.neededExpiration);
+    await this.write(this.pasteNameElement,this.title);
+    await this.click(this.createPasteBtn);
+};
 
-    await Page.write(this.pasteForm, this.postformText);
-    await Page.click(this.codeHighlighter);
-    await Page.writeAndSumbit(this.highlighterInput, this.bashHighlighter);
-    await Page.choseFromDroplist(this.expirationList, this.neededExpiration);
-    await Page.write(this.pasteNameElement, this.title);
-    await Page.click(this.createPasteBtn);
-  };
+async checkPaste() {
+    await this.checkTitle(this.title);
+    await this.checkElementForHaving(this.pasteHighterElement,this.bashHighlighter);
+    await this.checkElementForHaving(this.pasteTextElement,this.postformText);
+};
 
-  async checkPaste() {
-    await Page.checkTitle(this.title);
-    await Page.checkElementForHaving(this.pasteHighterElement, this.bashHighlighter);
-    await Page.checkElementForHaving(this.pasteTextElement, this.postformText);
-  };
-
-  async checkPasteTitle() {
-    await Page.checkTitle(this.NewPastTitle, this.pasteText);
-  };
+async checkPasteTitle(){
+    await this.checkTitle(this.NewPastTitle, this.pasteText);
+};
 };
 export default new PastebinPage();
